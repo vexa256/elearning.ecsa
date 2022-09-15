@@ -27,6 +27,7 @@ Route::middleware(['auth'])->group(function () {
     require __DIR__ . '/PostExams.php';
     require __DIR__ . '/Student.php';
     require __DIR__ . '/Config.php';
+    require __DIR__ . '/Practicals.php';
 
     Route::controller(NotesMiniController::class)->group(function () {
 

@@ -2,10 +2,7 @@
     <div class="modal-dialog modal-dialog-scrollable modal-xl">
         <div class="modal-content">
             <div class="modal-header bg-gray">
-                <h5 class="modal-title"> Let's create a new course test schedule
-
-
-
+                <h5 class="modal-title"> Let's create a new test duration setting
                 </h5>
 
                 <!--begin::Close-->
@@ -18,7 +15,7 @@
 
             <div class="modal-body ">
 
-                <form action="{{ route('NewSchedule') }}" class="row"
+                <form action="{{ route('NewDuration') }}" class="row"
                     method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="row">
@@ -84,7 +81,7 @@
                             value="{{ date('Y-m-d h:i:s') }}">
 
                         <input type="hidden" name="TableName"
-                            value="exam_timers">
+                            value="exam_durations">
 
                         @foreach ($Form as $data)
                             @if ($data['type'] == 'string')
@@ -113,8 +110,8 @@
 
 
 
-                    <input type="hidden" name="uuid"
-                        value="{{ md5(Auth::user()->UserID) }}">
+                    {{-- <input type="hidden" name="uuid"
+                        value="{{ md5(Auth::user()->UserID) }}"> --}}
 
 
 

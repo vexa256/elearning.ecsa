@@ -5,15 +5,15 @@
             {!! Alert(
                 $icon = 'fa-info',
                 $class = 'alert-primary',
-                $Title = 'Test Scheduler Settings',
-                $Msg = 'Set  and manage test schedules for all courses',
+                $Title = 'Test Duration Settings',
+                $Msg = 'Set  and manage test duration for all courses',
             ) !!}
 
 
         </div>
         <div class="card-body pt-3 bg-light shadow-lg table-responsive">
 
-            {{ HeaderBtn($Toggle = 'New', $Class = 'btn-danger', $Label = 'New Schedule ', $Icon = 'fa-plus') }}
+            {{ HeaderBtn($Toggle = 'New', $Class = 'btn-danger', $Label = 'Set Test Duration ', $Icon = 'fa-plus') }}
 
 
 
@@ -24,8 +24,7 @@
                         class="fw-bold  text-gray-800 border-bottom border-gray-200">
                         <th>Course </th>
                         <th>Test Type</th>
-                        <th>Days needed to read the course materials before
-                            taking the test
+                        <th>Time in minutes for students to complete test
                         </th>
 
                         <th class="bg-danger fw-bolder text-light"> Delete
@@ -39,13 +38,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @isset($Exams)
-                        @foreach ($Exams as $data)
+                    @isset($Duration)
+                        @foreach ($Duration as $data)
                             <tr>
 
                                 <td>{{ $data->Course }}</td>
                                 <td>{{ $data->TestType }}</td>
-                                <td>{{ $data->DayBeforeStudentIsAllowedToAttemptTest }}
+                                <td>{{ $data->TestDurationInMinutes }}
                                 </td>
 
                                 <td>
@@ -55,7 +54,7 @@
                                             'msg' => 'You want to delete this record',
                                             'route' => route('DeleteDataWeb', [
                                                 'id' => $data->id,
-                                                'TableName' => 'exam_timers',
+                                                'TableName' => 'exam_durations',
                                             ]),
                                             'label' => '<i class="fas fa-trash"></i>',
                                             'class' => 'btn btn-danger btn-sm deleteConfirm admin',
@@ -82,4 +81,4 @@
 </div>
 
 
-@include('Scheduler.NewSchedule')
+@include('Scheduler.NewDuration')

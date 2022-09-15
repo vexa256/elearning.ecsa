@@ -58,7 +58,7 @@
             <i class="fas text-light fw-bolder fa-2x me-1 fa-clipboard"
                 aria-hidden="true"></i>
         </span>
-        <span class="menu-title ms-2 fs-6">Test Setups</span>
+        <span class="menu-title ms-2 fs-6">Test Management</span>
         <span class="menu-arrow"></span>
     </span>
     <div class="menu-sub menu-sub-accordion menu-active-bg">
@@ -70,7 +70,29 @@
 
         MenuItem($link = route('ModularTestCourse'), $label = 'Modular Tests');
 
+        MenuItem($link = route('PracSelectTest'), $label = 'Practical Test');
+
+        ?>
+
+
+    </div>
+</div>
+
+<div data-kt-menu-trigger="click" class="menu-item menu-accordion viewer_only">
+    <span class="menu-link">
+        <span class="menu-icon">
+            <i class="fas text-light fw-bolder fa-2x me-1 fa-cogs"
+                aria-hidden="true"></i>
+        </span>
+        <span class="menu-title ms-2 fs-6">Test Settings</span>
+        <span class="menu-arrow"></span>
+    </span>
+    <div class="menu-sub menu-sub-accordion menu-active-bg">
+        <?php
+
         MenuItem($link = route('ExamTimerSettings'), $label = 'Test Scheduler');
+
+        MenuItem($link = route('MgtExamDuration'), $label = 'Test Duration');
 
         ?>
 
