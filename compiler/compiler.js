@@ -1,0 +1,15 @@
+import "./globals/GlobalVars";
+import "./globals/fslightbox";
+import axios from "axios";
+window.axios = axios;
+import "./globals/Rem";
+import "./globals/Errors";
+import "./globals/Alerts";
+import "./globals/SaveForm";
+import "./globals/UpdateForm";
+import "./globals/Delete";
+import "./courses/SaveCourse";
+import "./modules/SelectCourse";
+import "./PreExam/NewPreExam";
+// import "./js/NewInstitution";
+import "./nav/Nav";

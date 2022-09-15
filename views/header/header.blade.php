@@ -5,21 +5,30 @@
 <head>
     <base href="">
     <title>ECSA-Health Community | @isset($Title)
-            {{ $Title }} | The East, Central and Southern Africa Health Community (ECSA-HC) is an inter-governmental
-            health organization that fosters and promotes regional cooperation in health among member states. Member states
-            of the ECSA Health Community are Kenya, Lesotho, Malawi, Mauritius, Eswatini, United Republic of Tanzania,
+            {{ $Title }} | The East, Central and Southern Africa Health
+            Community (ECSA-HC) is an inter-governmental
+            health organization that fosters and promotes regional cooperation in
+            health among member states. Member states
+            of the ECSA Health Community are Kenya, Lesotho, Malawi, Mauritius,
+            Eswatini, United Republic of Tanzania,
             Uganda, Zambia and Zimbabwe. |Mandate
-            The mandate of ECSA-HC is to promote and encourage efficiency and relevance in the provision of health services
+            The mandate of ECSA-HC is to promote and encourage efficiency and
+            relevance in the provision of health services
             in the region.
 
             | Vision
-            To be the leader in health in East, Central and Southern Africa, contributing towards the attainment of the
-            highest standard of physical, mental and social well-being of the people in the region.
+            To be the leader in health in East, Central and Southern Africa,
+            contributing towards the attainment of the
+            highest standard of physical, mental and social well-being of the people
+            in the region.
 
             | Mission
-            ECSA Health Community recognizes health as a fundamental human right. As an inter-governmental organization,
-            ECSA promotes the highest standards of health for the individuals, families and communities through advocacy,
-            capacity building, brokerage, coordination, inter-sectoral collaboration and harmonization of health policies
+            ECSA Health Community recognizes health as a fundamental human right. As
+            an inter-governmental organization,
+            ECSA promotes the highest standards of health for the individuals,
+            families and communities through advocacy,
+            capacity building, brokerage, coordination, inter-sectoral collaboration
+            and harmonization of health policies
             and programmes.
         @endisset </title>
     <meta name="description" content="" />
@@ -50,7 +59,12 @@
 
 
 
-
+    <style>
+        .pdfobject-container {
+            height: 100vh;
+            border: 1rem solid rgba(0, 0, 0, .1);
+        }
+    </style>
 
     <style>
         select,
@@ -176,12 +190,16 @@
             color: black !important
         }
     </style>
-    <link href="{{ asset('assets/plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/css/style.bundle.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/plugins/global/plugins.bundle.css') }}"
+        rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/css/style.bundle.css') }}" rel="stylesheet"
+        type="text/css" />
     <link rel="stylesheet" type="text/css"
         href="{{ asset('assets/plugins/custom/datatables/datatables.bundle.css') }}" />
 
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+
+    @vite(['compiler/compiler.css'])
     <style>
         .aside-menu .menu-item .menu-link.active {
             background-color: #f1416c !important;

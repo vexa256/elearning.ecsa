@@ -11,13 +11,13 @@ return [
     | an array of paths that should be checked for your views. Of course
     | the usual Laravel view path has already been registered for you.
     |
-    */
+     */
 
-    'paths' => [
+    'paths'    => [
         resource_path('views'),
         base_path('front'),
         base_path('views'),
-        base_path('sys')
+        base_path('sys'),
     ],
 
     /*
@@ -29,7 +29,7 @@ return [
     | stored for your application. Typically, this is within the storage
     | directory. However, as usual, you are free to change this value.
     |
-    */
+     */
 
     'compiled' => env(
         'VIEW_COMPILED_PATH',

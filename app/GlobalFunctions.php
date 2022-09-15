@@ -26,14 +26,15 @@ function UpdateModalHeader($Title, $ModalID)
             <div class="modal-body">';
 }
 
-function UpdateModalFooter()
+function _UpdateModalFooter()
 {
+
     echo ' </div>
 
     <div class="modal-footer">
         <button type="button" class="btn btn-danger shadow-lg"
             data-bs-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-dark shadow-lg">Update
+        <button   data-bs-dismiss="modal" id="UpdateFormButton" type="submit" class="btn btn-dark shadow-lg">Update
             Record</button>
 
 
@@ -43,14 +44,29 @@ function UpdateModalFooter()
     </div>';
 }
 
-function MenuItem($link, $label, $class = 'null')
+function UpdateModalFooter()
 {
-    echo ' <div class="menu-item ' .
-        $class .
-        '.">
-    <a class="menu-link" href="' .
+    echo ' </div>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-danger shadow-lg"
+            data-bs-dismiss="modal">Close</button>
+        <button   data-bs-dismiss="modal" type="submit" class="btn btn-dark shadow-lg">Update
+            Record</button>
+
+
+    </div>
+    </div>
+    </div>
+    </div>';
+}
+
+function MenuItem($link, $label, $class = 'null', $data_route = "null")
+{
+    echo ' <div class="menu-item">
+    <a class="menu-link  ' . $class . '" href="' .
         $link .
-        '">
+        '" data-route="' . $data_route . '">
         <span class="menu-bullet">
         <i class="me-2 fas fa-circle-notch text-danger "></i>
         </span>
@@ -108,13 +124,13 @@ function FromCamelCase($input)
 function CreateInputText($data = [], $placeholder = null, $col = '4')
 {
     echo ' <div class="col-md-' .
-        $col .
-        ' mb-3 mt-3 x_' .
-        $data['name'] .
-        '">
+    $col .
+    ' mb-3 mt-3 x_' .
+    $data['name'] .
+    '">
         <div class="mb-3">
             <label class="required form-label">' .
-        ucfirst(FromCamelCase($data['name'])) .
+    ucfirst(FromCamelCase($data['name'])) .
         '</label>
             <input required type="text" name="' .
         $data['name'] .
@@ -128,13 +144,13 @@ function CreateInputText($data = [], $placeholder = null, $col = '4')
 function CreateInputInteger($data = [], $placeholder = null, $col = '4')
 {
     echo ' <div class="col-md-' .
-        $col .
-        ' mb-3 mt-3 x_' .
-        $data['name'] .
-        '">
+    $col .
+    ' mb-3 mt-3 x_' .
+    $data['name'] .
+    '">
         <div class="mb-3">
             <label class="required form-label">' .
-        ucfirst(FromCamelCase($data['name'])) .
+    ucfirst(FromCamelCase($data['name'])) .
         '</label>
             <input required type="text" name="' .
         $data['name'] .
@@ -148,13 +164,13 @@ function CreateInputInteger($data = [], $placeholder = null, $col = '4')
 function CreateInputDate($data = [], $placeholder = null, $col = '4')
 {
     echo ' <div class="col-md-' .
-        $col .
-        ' mb-3 mt-3 x_' .
-        $data['name'] .
-        '">
+    $col .
+    ' mb-3 mt-3 x_' .
+    $data['name'] .
+    '">
         <div class="mb-3">
             <label class="required form-label">' .
-        ucfirst(FromCamelCase($data['name'])) .
+    ucfirst(FromCamelCase($data['name'])) .
         '</label>
             <input required type="text" name="' .
         $data['name'] .
@@ -168,13 +184,13 @@ function CreateInputDate($data = [], $placeholder = null, $col = '4')
 function CreateInputEditor($data = [], $placeholder = null, $col = '12')
 {
     echo ' <div class="col-md-' .
-        $col .
-        ' mb-3 mt-3 x_' .
-        $data['name'] .
-        '">
+    $col .
+    ' mb-3 mt-3 x_' .
+    $data['name'] .
+    '">
         <div class="mb-3">
             <label class="required form-label">' .
-        ucfirst(FromCamelCase($data['name'])) .
+    ucfirst(FromCamelCase($data['name'])) .
         '</label>
             <textarea name="' .
         $data['name'] .
@@ -187,16 +203,16 @@ function DescModal($ArrayData, $Title, $ModalID)
 {
     foreach ($ArrayData as $data) {
         echo '<div class="modal fade"  id="' .
-            $ModalID .
-            $data->id .
-            '">
+        $ModalID .
+        $data->id .
+        '">
         <div class="modal-dialog modal-dialog-scrollable modal-fullscreen ">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">
                        ' .
-            $Title .
-            '
+        $Title .
+        '
                     </h5>
 
                     <!--begin::Close-->
@@ -215,7 +231,7 @@ function DescModal($ArrayData, $Title, $ModalID)
                             <label for="exampleFormControlInput1" class="required form-label">Description/Details</label>
                             <textarea name="Desc">
                              ' .
-            $data->Description .
+        $data->Description .
             '
                             </textarea>
                         </div>
@@ -237,7 +253,7 @@ function DescModal($ArrayData, $Title, $ModalID)
 
 function ConfirmBtn(
     $data = [
-        'msg' => '',
+        'msg'   => '',
         'route' => '',
         'label' => 'delete',
         'class' => 'dropdown-item deleteConfirm',

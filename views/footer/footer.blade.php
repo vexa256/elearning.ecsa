@@ -6,12 +6,11 @@
          <!--begin::Copyright-->
          <div class="text-dark order-2 order-md-1">
              <span class=" me-5 fs-4 fw-bolder text-danger">{{ date('Y') }} ©
-                 SRL Uganda</span>
+                 ECSA-HC </span>
              <a href="#"
                  class="float-end ms-5 ps-5 text-gray-800 text-hover-primary">
-                 Designed and Maintained by
-                 HD Resources
-                 LTD | Ayebare Timothy | vexa256@gmail.com</a>
+                 {{-- Regiional Elearning Platform --}}
+             </a>
          </div>
          <!--end::Copyright-->
 

@@ -28,7 +28,7 @@ class FormEngine extends Controller
         return $Form;
     }
 
-    private function __CreateInputText($data, $value, $col)
+    private function CreateInputText($data, $value, $col)
     {
         return $data = ' <div class="col-md-' . $col . ' mb-3 mt-3 x_' . $data['name'] . '">
         <div class="mb-3">
@@ -38,7 +38,7 @@ class FormEngine extends Controller
     </div>';
     }
 
-    private function __CreateInputInteger($data, $value, $col)
+    private function CreateInputInteger($data, $value, $col)
     {
         return $data = '<div class="col-md-' . $col . ' mb-3 mt-3 x_' . $data['name'] . '">
         <div class="mb-3">
@@ -48,7 +48,7 @@ class FormEngine extends Controller
     </div>';
     }
 
-    private function __CreateInputDate($data, $value, $col)
+    private function CreateInputDate($data, $value, $col)
     {
         return $data = ' <div class="col-md-' . $col . ' mb-3 mt-3 x_' . $data['name'] . '">
         <div class="mb-3">
@@ -58,7 +58,7 @@ class FormEngine extends Controller
     </div>';
     }
 
-    private function __CreateInputEditor($data, $value, $col)
+    private function CreateInputEditor($data, $value, $col)
     {
         return $data = ' <div class="col-md-' . $col . ' mb-3 mt-3 x_' . $data['name'] . '">
         <div class="mb-3">

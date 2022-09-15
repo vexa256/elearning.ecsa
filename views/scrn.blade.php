@@ -25,6 +25,7 @@
             <!--begin::Container-->
             <div id="kt_content_container" class="container-fluid">
 
+
                 @isset($Page)
                     @include($Page)
                 @endisset
