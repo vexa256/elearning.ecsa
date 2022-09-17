@@ -2,7 +2,7 @@
     <div class="modal-dialog modal-dialog-scrollable modal-xl">
         <div class="modal-content">
             <div class="modal-header bg-gray">
-                <h5 class="modal-title"> Let's create a new moudlar test
+                <h5 class="modal-title"> Let's create a new modular test
                     and attach it to the course <span class="text-danger">
                         {{ $CourseName }}
                     </span>

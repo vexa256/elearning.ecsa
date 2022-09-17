@@ -118,6 +118,8 @@
 
         MenuItem($link = route('ModularTestCourse'), $label = 'Modular Test Questions');
 
+        MenuItem($link = route('ModularTestCourse'), $label = 'Practical Test Questions');
+
         ?>
 
 

@@ -4,7 +4,7 @@
 <div class="card-body shadow-lg pt-3 bg-light table-responsive">
     <div class="row">
         <div class="col-md-12">
-            <form action="{{ route('AdaptToMgtNotes') }}" method="POST">
+            <form action="{{ route('PracModuleSelected') }}" method="POST">
                 @csrf
                 <div class="mb-3 col-md-12  py-5   my-5">
                     <label id="label" for=""

@@ -30,7 +30,7 @@
             <!-- end page title -->
 
             <div class="row">
-                <div class="col-xxl-5">
+                <div class="col-12">
                     <div class="d-flex flex-column h-100">
                         <div class="row h-100">
 

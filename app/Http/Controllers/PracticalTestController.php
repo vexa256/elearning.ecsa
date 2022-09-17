@@ -74,7 +74,7 @@ class PracticalTestController extends Controller
             ->where('id', '=', $id)
             ->first();
 
-        $PracticalTests = DB::table('Practical_tests')
+        $PracticalTests = DB::table('practical_tests')
             ->where('MID', '=', $Modules->MID)
             ->get();
 
@@ -86,7 +86,7 @@ class PracticalTestController extends Controller
 
         $FormEngine = new FormEngine();
         $data       = [
-            'Page'           => 'PracticalTests.MgtPractical',
+            'Page'           => 'PracticalTests.MgtPracTests',
             'Title'          => 'Manage Practical-Tests attached to the selected course',
             'Desc'           => $SelectedCourse->Course,
             'CourseName'     => $SelectedCourse->Course,
@@ -94,7 +94,7 @@ class PracticalTestController extends Controller
             'MID'            => $Modules->MID,
             'PracticalTests' => $PracticalTests,
             'rem'            => $rem,
-            'Form'           => $FormEngine->Form('Practical_tests'),
+            'Form'           => $FormEngine->Form('practical_tests'),
         ];
 
         return view('scrn', $data);

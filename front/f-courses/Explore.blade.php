@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-12">
         <div style="background-color: white !important;"
             class="card-body bg-light pt-3 bg-light shadow-lg table-responsive">
             <div class="card-title bg-light"
