@@ -4,7 +4,21 @@ use App\Http\Controllers\PracticalQuestionsController;
 use App\Http\Controllers\PracticalTestController;
 
 Route::controller(PracticalQuestionsController::class)->group(function () {
-    Route::get('PracSelectTest', 'PracSelectTest')->name('PracSelectTest');
+
+    Route::any('PracQtnTestCourse', 'PracQtnTestCourse')->name('PracQtnTestCourse');
+
+    Route::any('GoToManagePracQtns', 'GoToManagePracQtns')->name('GoToManagePracQtns');
+
+    Route::any('CoursePracQtnSelected', 'CoursePracQtnSelected')->name('CoursePracQtnSelected');
+
+    Route::any('PracQtnSelectTest/{id}', 'PracQtnSelectTest')->name('PracQtnSelectTest');
+
+    Route::any('MgtPracQtnTest/{id}', 'MgtPracQtnTest')->name('MgtPracQtnTest');
+
+    Route::any('PracQtnTestsMod/{id}', 'PracQtnTestsMod')->name('PracQtnTestsMod');
+
+    Route::any('PracQtnTestAdapt', 'PracQtnTestAdapt')->name('PracQtnTestAdapt');
+
 });
 Route::controller(PracticalTestController::class)->group(function () {
 
